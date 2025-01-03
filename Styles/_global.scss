@@ -1,0 +1,68 @@
+@import './colors';
+@import './icon';
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main-container{
+    width: 100%;
+    max-width:700px;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 13px;
+
+.image-container{
+    display:block;
+    width: 100%;
+    max-width: 300px;
+    margin:auto;
+    &>img{
+        width:100%;
+        display: block;
+        margin:auto;
+        padding:0;
+    }
+}
+.content-container{
+    display: block;
+    width: 100%;
+    max-width:400px;
+    line-height:1.50rem;
+    padding: 1.50rem 2rem;
+    h2{
+        color: $VeryDarkGrayishBlue;
+    }
+    &>.description{
+        color:$DesaturatedDarkBlue;
+        margin:0.5rem 0;
+    }
+}
+    .bottom-container{
+        .primary-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width:50px;
+                border-radius: 50%;
+            }
+            .michelle{
+                flex-basis: 200px;
+                margin:0;
+                &>p:nth-child(1){
+                    color:$VeryDarkGrayishBlue;
+                    font-weight: bold;
+                }
+                &>p:nth-child(2){
+                    color:$DesaturatedDarkBlue;
+
+                }
+            }
+        }
+    }
+}   

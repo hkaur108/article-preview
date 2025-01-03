@@ -1,0 +1,54 @@
+.share-icon{
+    width:40px;
+    background-color: lightgray;
+    cursor:pointer;
+    border-radius: 50%;
+    text-align:center;
+    padding:.5em;
+    &:hover{
+        cursor: pointer;
+    }
+    
+}
+
+.show-content{
+    width:100%;
+    position: absolute;
+    top:140px;
+    right:-48px;
+    max-width: 200px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $VeryDarkGrayishBlue;
+    color:$GrayishBlue;
+    padding:5px 8px;
+    border-radius: 10px;
+    opacity: 0;
+    &>p{
+        letter-spacing: 2px;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img{
+            width:15px;
+            margin-right:1em;
+        }
+    }
+    .share-icon{
+        display: none;
+    }
+    .triangle{
+        position: absolute;
+        top:33px;
+        width: 0;
+        height:0;
+        border-top:10px solid $VeryDarkGrayishBlue;
+        border-left: 10px solid transparent; 
+        border-right: 10px solid transparent;
+    }
+
+}
