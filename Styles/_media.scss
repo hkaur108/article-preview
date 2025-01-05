@@ -2,15 +2,37 @@
 @import './icon';
 
 @media screen and (min-width:600px){
-    body{
-        background-color: blue;
-    }
     .wider-show-content{
         display: none;
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:786px){
+    .wider-show-content{
+        display: none;
+    }
+    .main-container{
+        width: 100%;
+        max-width: 650px;
+        .image-container{
+            max-width: 325px;
+        }
+        .content-container{
+            font-size: 1rem;
+            padding:1rem 2rem;
+            max-width: 325px;
+            h2{
+                font-size: 1rem;
+            }
+            .description{
+                font-size: 0.80rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px){
+   
     .main-container{
         display: flex;
         align-items: center;
@@ -18,20 +40,60 @@
         flex-direction: column;
         width:100%;
         max-width: 300px;
+        height:530px;
+        .image-container{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            img{
+                border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            }
+        }
+        .content-container{
+            padding:1.50rem 2rem 0 2rem;
+            
+        }
+     .wider-show-content{
+            width:100%;
+            opacity: 0;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: $VeryDarkGrayishBlue;
+            color:$LightGrayishBlue;
+            padding:1rem 0.5rem;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            letter-spacing: 2.3px;
+            transition: all 0.3s ease-in;
+            font-size: 1rem;
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-basis: 80px;
+            }
+            .share-icon{
+                width:40px;
+                background-color: lightgray;
+                cursor:pointer;
+                border-radius: 50%;
+                text-align:center;
+                padding:.5em;
+                &:hover{
+                    cursor: pointer;
+                }
+                
+            }
+            
+        }
     }
+.show-main{
+    display: none;
+}
 
-    .wider-show-content{
-        width:100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: $VeryDarkGrayishBlue;
-        color:$LightGrayishBlue;
-        padding:0.5rem;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-    .show-content{
-        display: none;
-    }
+.show{
+    opacity: 0;
+}
 }

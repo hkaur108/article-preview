@@ -25,7 +25,9 @@
     color:$GrayishBlue;
     padding:5px 8px;
     border-radius: 10px;
+    z-index:1;  
     opacity: 0;
+
     &>p{
         letter-spacing: 2px;
     }
@@ -50,5 +52,14 @@
         border-left: 10px solid transparent; 
         border-right: 10px solid transparent;
     }
+   
 
+}
+
+.show{
+    opacity: 1;
+}
+
+.wider-screen,.smaller-screen{
+    transition:all 0.3s ease-in;
 }

@@ -27,6 +27,7 @@
   color: hsl(212, 23%, 69%);
   padding: 5px 8px;
   border-radius: 10px;
+  z-index: 1;
   opacity: 0;
 }
 .show-content > p {
@@ -52,6 +53,14 @@
   border-top: 10px solid hsl(217, 19%, 35%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.show {
+  opacity: 1;
+}
+
+.wider-screen, .smaller-screen {
+  transition: all 0.3s ease-in;
 }
 
 * {
@@ -88,7 +97,7 @@
   width: 100%;
   max-width: 400px;
   line-height: 1.5rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
 }
 .main-container .content-container h2 {
   color: hsl(217, 19%, 35%);
@@ -108,14 +117,21 @@
 }
 .main-container .bottom-container .primary-content .michelle {
   flex-basis: 200px;
-  margin: 0;
+  margin: auto;
+  padding: 5px;
 }
 .main-container .bottom-container .primary-content .michelle > p:nth-child(1) {
   color: hsl(217, 19%, 35%);
   font-weight: bold;
+  font-size: 0.85rem;
 }
 .main-container .bottom-container .primary-content .michelle > p:nth-child(2) {
   color: hsl(214, 17%, 51%);
+  font-size: 0.75rem;
+}
+
+footer {
+  margin: 2rem;
 }
 
 .share-icon {
@@ -144,6 +160,7 @@
   color: hsl(212, 23%, 69%);
   padding: 5px 8px;
   border-radius: 10px;
+  z-index: 1;
   opacity: 0;
 }
 .show-content > p {
@@ -169,6 +186,14 @@
   border-top: 10px solid hsl(217, 19%, 35%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.show {
+  opacity: 1;
+}
+
+.wider-screen, .smaller-screen {
+  transition: all 0.3s ease-in;
 }
 
 .share-icon {
@@ -197,6 +222,7 @@
   color: hsl(212, 23%, 69%);
   padding: 5px 8px;
   border-radius: 10px;
+  z-index: 1;
   opacity: 0;
 }
 .show-content > p {
@@ -222,6 +248,14 @@
   border-top: 10px solid hsl(217, 19%, 35%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.show {
+  opacity: 1;
+}
+
+.wider-screen, .smaller-screen {
+  transition: all 0.3s ease-in;
 }
 
 * {
@@ -258,7 +292,7 @@
   width: 100%;
   max-width: 400px;
   line-height: 1.5rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
 }
 .main-container .content-container h2 {
   color: hsl(217, 19%, 35%);
@@ -278,14 +312,21 @@
 }
 .main-container .bottom-container .primary-content .michelle {
   flex-basis: 200px;
-  margin: 0;
+  margin: auto;
+  padding: 5px;
 }
 .main-container .bottom-container .primary-content .michelle > p:nth-child(1) {
   color: hsl(217, 19%, 35%);
   font-weight: bold;
+  font-size: 0.85rem;
 }
 .main-container .bottom-container .primary-content .michelle > p:nth-child(2) {
   color: hsl(214, 17%, 51%);
+  font-size: 0.75rem;
+}
+
+footer {
+  margin: 2rem;
 }
 
 .share-icon {
@@ -314,6 +355,7 @@
   color: hsl(212, 23%, 69%);
   padding: 5px 8px;
   border-radius: 10px;
+  z-index: 1;
   opacity: 0;
 }
 .show-content > p {
@@ -339,17 +381,45 @@
   border-top: 10px solid hsl(217, 19%, 35%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.show {
+  opacity: 1;
+}
+
+.wider-screen, .smaller-screen {
+  transition: all 0.3s ease-in;
 }
 
 @media screen and (min-width: 600px) {
-  body {
-    background-color: blue;
-  }
   .wider-show-content {
     display: none;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 786px) {
+  .wider-show-content {
+    display: none;
+  }
+  .main-container {
+    width: 100%;
+    max-width: 650px;
+  }
+  .main-container .image-container {
+    max-width: 325px;
+  }
+  .main-container .content-container {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    max-width: 325px;
+  }
+  .main-container .content-container h2 {
+    font-size: 1rem;
+  }
+  .main-container .content-container .description {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 650px) {
   .main-container {
     display: flex;
     align-items: center;
@@ -357,20 +427,57 @@
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+    height: 530px;
   }
-  .wider-show-content {
+  .main-container .image-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main-container .image-container img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .main-container .content-container {
+    padding: 1.5rem 2rem 0 2rem;
+  }
+  .main-container .wider-show-content {
     width: 100%;
+    opacity: 0;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: hsl(217, 19%, 35%);
     color: hsl(210, 46%, 95%);
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    letter-spacing: 2.3px;
+    transition: all 0.3s ease-in;
+    font-size: 1rem;
   }
-  .show-content {
+  .main-container .wider-show-content .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 80px;
+  }
+  .main-container .wider-show-content .share-icon {
+    width: 40px;
+    background-color: lightgray;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.5em;
+  }
+  .main-container .wider-show-content .share-icon:hover {
+    cursor: pointer;
+  }
+  .show-main {
     display: none;
+  }
+  .show {
+    opacity: 0;
   }
 }
 body {
